@@ -7,6 +7,7 @@ import ProductsRoute from './src/routes/products.routes';
 import associateModels from './src/database/models/associationModels';
 import OrderRoutes from './src/routes/orders.routes';
 import './src/utils/cron';
+import ProductImageRoutes from './src/routes/productImages.routes';
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ associateModels();
 
 app.use('/api/products', ProductsRoute);
 app.use('/api/orders', OrderRoutes);
+app.use('/api/images', ProductImageRoutes);
 
 // Start the server
 const startServer = async () => {
